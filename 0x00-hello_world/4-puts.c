@@ -1,4 +1,3 @@
-#include <studio.h>
 /**
 * main - Program that prints a text.
 *
