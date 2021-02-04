@@ -7,13 +7,12 @@
  */
 
 int main(void)
-
 {
-int n = 97;
-if (n >= 122)
-n++;
+char alphabet;
+for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
 {
-putchar(n);
+putchar(alphabet);
 }
+putchar('\n');
 return (0);
 }
