@@ -10,29 +10,19 @@
 int main(void)
 
 {
-
-  int number_a, number_b;
-
-  for (number_a = 48; number_a <= 56; number_a++)
-    for (number_b = 49; number_b <= 57; number_b++)
-      {
-
-	putchar(number_a);
-	putchar(number_b);
-
-	if (number_a == 56 && number_b == 57)
-
-	  {
-	    putchar('\n');
-	    break;
-	  }
-
-	putchar(',');
-	putchar(' ');
-
-      }
-  number_b = number_a + 1;
-
-  return (0);
-
+int number_a, number_b;
+for (number_a = 48; number_a <= 56; number_a++)
+for (number_b = 49; number_b <= 57; number_b++)
+{
+putchar(number_a);
+putchar(number_b);
+if (number_a == 56 && number_b == 57)
+{
+putchar('\n');
+break;
+}
+putchar(',');
+putchar(' ');
+}
+return (0);
 }
