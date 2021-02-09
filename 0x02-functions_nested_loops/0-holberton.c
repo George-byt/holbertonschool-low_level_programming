@@ -1,4 +1,4 @@
-#include "holberton.h"
+B#include "holberton.h"
 
 /**
 * main - Program that prints Holberton.
@@ -12,7 +12,7 @@ int main(void)
 
 char str[] = "Holberton";
 int i;
-   
+
 i = 0;
 
 while (str[i])
