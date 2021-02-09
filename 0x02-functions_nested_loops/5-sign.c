@@ -2,14 +2,14 @@
 
 /**
  * print_sign - Function that prints the sign of a number.
- * @n: number. 
+ * @n: number.
  * Return: Always 0.
  */
 
 int print_sign(int n)
 
 {
-if (n > 0) 
+if (n > 0)
 {
 {
 _putchar('+');
