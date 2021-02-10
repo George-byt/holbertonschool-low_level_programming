@@ -1,15 +1,28 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
- * positive_or_negative - prints if a number is positive, negative or zero.
- * @n: the integer to be found if it is positive, negative or zero.
+ * main - Program that assing a random number.
+ *
+ * Return: Always 0.
  */
-void positive_or_negative(int n)
+
+int main(void)
 {
-if (n > 0)
-printf("%d is positive\n", n);
-else if (n < 0)
-printf("%d is negative\n", n);
-else
-printf("%d is zero\n", n);
-}
+  int n;
+  srand(time(0));
+  n = rand() - RAND_MAX / 2;
+  if (n > 0)
+    {
+      printf("%d is positive\n", n);
+    }
+  if (n == 0)
+    {
+      printf("%d is zero\n", n);
+    }
+  if (n < 0)
+    {
+      printf("%d is negative\n", n);
+    }
+  return (0);
