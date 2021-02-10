@@ -19,7 +19,7 @@ for (horizontal = 1; horizontal <= 9; horizontal++)
 if (horizontal == 1)
 _putchar('0');
 value = (horizontal * vertical);
-if (product < 10)
+if (value < 10)
 {
 _putchar(',');
 _putchar(' ');
