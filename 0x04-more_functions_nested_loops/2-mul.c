@@ -3,7 +3,8 @@
 
 /**
  * mul - Function that multiplies two integers.
- *
+ * @a: number_a.
+ * @b: bumber_b.
  * Return: Always 0.
  */
 
