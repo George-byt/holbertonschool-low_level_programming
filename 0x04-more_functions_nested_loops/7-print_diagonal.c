@@ -2,7 +2,7 @@
 
 /**
  * print_diagonal - check the code for Holberton School students.
- *
+ * @n: the number of times the "\" character will be print.
  * Return: Always 0.
  */
 
@@ -15,8 +15,7 @@ if (n <= 0)
 _putchar('\n');
 for (line = 0; line < n; line++)
 {
-for(space = 0; space < line; space++)
-
+for (space = 0; space < line; space++)
 _putchar(' ');
 _putchar('\\');
 _putchar('\n');
