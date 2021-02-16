@@ -7,10 +7,11 @@
  */
 void puts2(char *str)
 {
-for (; *str != '\0'; str++)
-if (*str % 2 == 0)
-{
-_putchar(*str);
-}
+int counter;
+int size = 0;
+for (counter = 0; str[counter] != '\0'; counter++)
+size++;
+for (counter = 0; counter < size; counter += 2)
+_putchar(*(str + counter));
 _putchar('\n');
 }
