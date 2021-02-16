@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include <stdio.h>
 /**
  * puts2 - Function that prints numbers.
  * @str: String pointer.
