@@ -11,7 +11,7 @@ int counter;
 for (counter = 0; counter < n; counter++)
 {
 printf("%i", a[counter]);
-if (counter != n -1)
+if (counter != n - 1)
 printf(", ");
 }
 printf("\n");
