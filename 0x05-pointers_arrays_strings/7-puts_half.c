@@ -11,7 +11,11 @@ int counter;
 int size = 0;
 for (counter = 0; str[counter] != '\0'; counter++)
 size++;
-for (counter = 5; counter < size; counter += 1)
-_putchar(*(str + counter));
+if (size % 2)
+counter = (size + 1) / 2;
+else
+counter = size / 2;
+while (str[counter])
+_putchar(*(str + counter++));
 _putchar('\n');
 }
