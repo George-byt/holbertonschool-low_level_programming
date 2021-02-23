@@ -1,8 +1,8 @@
-#include "holberton.h"
+B#include "holberton.h"
 #include <stdio.h>
 
 /**
- * print_chessboard - Function that prints chessboard. 
+ * print_chessboard - Function that prints chessboard.
  * @a: Matrix.
  * Return: Always 0.
  */
