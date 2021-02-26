@@ -8,25 +8,25 @@ int square_root(int n, int m);
  */
 int _sqrt_recursion(int n)
 {
-  return (square_root(n, 1));
+return (square_root(n, 1));
 }
 
 /**
- * square_root
+ * square_root - Function that runs the numbers.
  * @n: Integer.
  * @m: Integer.
  * Return: Return a number.
  */
 int square_root(int n, int m)
 {
-  if (m * m == n)
-    {
-      return (m);
-    }
-  else if (m * m > n)
-    {
-      return (-1);
-    }
-  else
-    return (square_root(n, m + 1));
+if (m * m == n)
+{
+return (m);
+}
+else if (m * m > n)
+{
+return (-1);
+}
+else
+return (square_root(n, m + 1));
 }
