@@ -8,14 +8,13 @@
  */
 int main(int argc, char *argv[])
 {
-  int i;
-  int len;
-  for (i = 1; i < argc; i++)
-    {
-      len++;
-    }
-  (void)argv;
-  printf("%d\n", len);
-
-  return (0);
+int i;
+int len;
+for (i = 1; i < argc; i++)
+{
+len++;
+}
+(void)argv;
+printf("%d\n", len);
+return (0);
 }
