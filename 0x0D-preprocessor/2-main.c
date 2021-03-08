@@ -1,14 +1,13 @@
 #include <stdio.h>
 
 /**
- * main - Program that prints the number of arguments passed into it.
- * @argc: Argument count.
- * @argv: Argument vector.
- * Return: Always 0 (Success)
+ * main -  Print the name of the file.
+ *
+ * Return: Return void.
  */
 
-int main(int argc, char **argv[])
+int main(void)
 {
-  printf("%s\n", argv[0]);
-  return (0);
+printf("%s\n", __FILE__);
+return (0);
 }
