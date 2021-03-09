@@ -1,19 +1,9 @@
 <!DOCTYPE html>
-
 <html>
-
-<head>
-
-<title>PREPROCESSOR.</title>
-
-...
-
-</head>
-
-<body>
-
-Cuerpo de la página web
-
-</body>
-
+    <head>
+    ...
+    </head>
+    <body>
+    <h1>PREPROCESSOR.</h1>
+    </body>
 </html>
