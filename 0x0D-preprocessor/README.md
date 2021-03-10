@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<h1 align="center"> PREPROCESSOR.</h1>
+<p align="center">
+<img src="https://www.holbertonschool.com/holberton-logo.png" alt="Holberton" class="center">
+<h1 align = "center">PREPROCESSOR.</h1>
+<h3 align = "center">0x0D-preprocessor</h3>
+</p>
 </head>
 <body>
 <p>Let's define preprocessing as something that allows you to engineer and modify your source code before submitting it to the compiler. This means that the C compilation pipeline has at least one step more in comparison to other languages.</p>
