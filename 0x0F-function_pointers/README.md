@@ -1,6 +1,6 @@
 <html>
 <head>
-<h1>FUNCTION POINTERS.</h1>
+<h1 align = "center">FUNCTION POINTERS.</h1>
 </head>
 <body>
 </body>
