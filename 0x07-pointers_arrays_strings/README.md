@@ -1,1 +1,11 @@
-This project is about even more pointers, arrays and strings.
+<html>
+<head>
+<p align="center">
+<img src="https://www.holbertonschool.com/holberton-logo.png" alt="Holberton" class="center">
+<h1 align = "center">POINTERS, ARRAYS AND STRINGS</h1>
+<h3 align = "center">0x07-pointers_arrays_strings</h3>
+</p>
+</head>
+<body>
+</body>
+</html>
