@@ -18,13 +18,7 @@ Macros have a number of applications and you cant see some of them as follows:
 <li>Conditional compilation.</li> 
 </ul>
 <h2>Defining a macro.</h2>
-<p>Macros are defined using the #define directive. Each macro has a name and a possible list of parameters. It also has a value that gets substituted by its name in the preprocessing phase through a step called macro expansion. Let's start with a simple example:</p>
-<p><b>#define ABC 5</b></p>
-<p>int main(int argc, char **argv) {</p>
-<p>int x = 2;</p>
-<p>int y = ABC;</p>
-<p>int z = x + y;</p>
-<p>return 0;</p>
-<p>}</p>
+<p>Macros are defined using the #define directive. Each macro has a name and a possible list of parameters. It also has a value that gets substituted by its name in the preprocessing phase through a step called macro expansion. A macro definition is usually of the following form:</p>
+<p><b>#define MACRO_NAME(arg,1 arg2, ...) [code to expand to]</b></p>
 </body>
 </html>
