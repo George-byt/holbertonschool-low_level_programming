@@ -6,5 +6,6 @@
 </p>
 </head>
 <body>
+<p>This project is about Foundations - Low-level programming & Algorithm - Hatching out</p>
 </body>
 </html>
