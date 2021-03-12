@@ -16,7 +16,7 @@ while (format != NULL && format[i])
 {
 form = format[i];
 switch (form)
-{	
+{
 case 'c':
 printf("%c", va_arg(ar, int));
 break;
