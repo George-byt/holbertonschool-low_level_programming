@@ -1,6 +1,6 @@
 #include "variadic_functions.h"
 /**
- * print_numbers -
+ * print_numbers - Functions that prints numbers.
  * @separator: print all the numbers with a separator.
  * @n: string to separate the numbers.
  * Return: Void function.
@@ -8,7 +8,7 @@
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 
-unsigned counter;
+unsigned int counter;
 va_list args;
 
 va_start(args, n);
