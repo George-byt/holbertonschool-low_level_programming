@@ -6,13 +6,13 @@
  */
 int sum_them_all(const unsigned int n, ...)
 {
-unsigned int c, res = 0;
+unsigned int counter, suma = 0;
 va_list num_arg;
 if (n == 0)
 return (0);
 va_start(num_arg, n);
-for (c = 0; c < n; c++)
-res += va_arg(num_arg, int);
+for (counter = 0; counter < n; counter++)
+suma = suma + va_arg(num_arg, int);
 va_end(num_arg);
-return (res);
+return (suma);
 }
