@@ -1,8 +1,6 @@
 /**
 * main - Program that prints a text.
-*
 * Return: Alwayes 0 (Success)
-*
 */
 #include <stdio.h>
 int main(void)
