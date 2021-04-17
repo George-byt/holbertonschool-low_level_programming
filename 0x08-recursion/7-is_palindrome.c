@@ -1,37 +1,55 @@
 #include "holberton.h"
-#include <stdio.h>
-#include <math.h>
-int reverse(int s);
+
+int _strlen_recursion(char *s);
+int aux(int n, int cont, char *s);
+
 /**
- * is_palindrome - Function that returns 1 if a 
- * string is a palindrome and 0 if not.
- * @s: String pointer.
- * Return: Always 0.
+ * is_palindrome - if a string is a palindrome
+ * @s: string
+ * Return: returns 1 if palindrome
  */
 int is_palindrome(char *s)
 {
-  /* 
-   * Check if the given number is equal to 
-   * its reverse.
-   */
-if (s == reverse(s))
-{
-return (1);
-}
-return (0);
+	int n;
+
+	n = _strlen_recursion(s);
+	return (aux(n, 0, s));
 }
 
 /**
- * Recursive - function to find reverse of any number.
- * @num: Integer.
- *
+ * _strlen_recursion - Returns the length of a string
+ * @s: string to count
+ * Return: length of string
  */
-int reverse(int s)
+int _strlen_recursion(char *s)
 {
-  /* Find number of digits in num */
-int digit = (int)log10(s);
-  /* Recursion base condition */
-if (s == 0)
-  return (0);
-return ((s%10 * pow(10, digit)) + reverse(s/10));
+	int n;
+
+	if (s[0] != '\0')
+	{
+		n = _strlen_recursion(&s[1]);
+	} else
+		return (0);
+
+	return (n + 1);
+}
+
+
+/**
+ * aux - a
+ * @n: a
+ * @cont: a
+ * @s: a
+ * Return: a
+ */
+int aux(int n, int cont, char *s)
+{
+	if (n / 2 == cont)
+		return (1);
+	else if (s[cont] == s[n - 1 - cont])
+		cont = aux(n, cont + 1, s);
+	else
+		return (0);
+
+	return (cont);
 }
