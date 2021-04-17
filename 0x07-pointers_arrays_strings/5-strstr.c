@@ -3,10 +3,8 @@
 
 /**
  * _strstr - Function that locates a substring.
- * @haystack:
- * @needle:
- *
- *
+ * @haystack: Pointer to string target.
+ * @needle: Pointer to string.
  * Return: Always 0.
  */
 char *_strstr(char *haystack, char *needle)
