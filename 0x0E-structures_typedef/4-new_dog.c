@@ -1,91 +1,92 @@
-#include "dog.h"
 #include <stdlib.h>
+#include <stdio.h>
+#include "dog.h"
+int _strlen(char *s);
+char *_strncpy(char *dest, char *src);
 
 /**
- * _strlen - return the length of a string
- * @s: strint to evaluate
+ * new_dog - creates a new instance for dog_t & saves name & owner
+ * @name: pointer to name input
+ * @age: integer input
+ * @owner: pointer to owner input
  *
- * Return: length of string
- **/
-
-int _strlen(char *s)
-{
-	int i;
-
-	i = 0;
-
-	while (s[i] != '\0')
-		i++;
-	i++; /* add 1 to account for '\0' */
-	return (i);
-}
-
-/**
- * new_strcpy - copy second string to buffer of first string
- * @dest: pointer to empty dest
- * @src: string to copy
- *
- * Return: pointer to dest
- **/
-
-char *new_strcpy(char *dest, char *src)
-{
-	int i;
-
-	for (i = 0; src[i] != '\0'; i++)
-		dest[i] = src[i];
-	return (dest);
-}
-
-/**
- * new_dog - create a new dog
- * @name: name of dog
- * @age: age of dog
- * @owner: name of owner
- *
- * Return: pointer to new struct dog_t (SUCCESS), NULL (FAILURE)
- **/
+ * Return: pointer to dog_t struct
+ */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *good_boy;
-	unsigned int lenn; /*length of name*/
-	unsigned int leno; /*length of owner*/
+	dog_t *bulldog;
+	char *name_copy;
+	char *owner_copy;
 
-	lenn = _strlen(name);
-	leno = _strlen(owner);
-
-	if (name == NULL || owner == NULL)
+	bulldog = malloc(sizeof(dog_t));
+	if (bulldog == NULL)
 		return (NULL);
 
-	good_boy = malloc(sizeof(dog_t));
-	if (good_boy == NULL)
+	name_copy = malloc(sizeof(char) * (_strlen(name) + 1));
+	if (name_copy == NULL)
 	{
-		free(good_boy); return (NULL);
+		free(bulldog);
+		return (NULL);
 	}
-	if (good_boy != NULL)
+	owner_copy = malloc(sizeof(char) * (_strlen(owner) + 1));
+	if (owner_copy == NULL)
 	{
-		good_boy->name = malloc(lenn);
-		if (good_boy->name == NULL)
-		{
-			free(good_boy); return (NULL);
-		}
-		if (good_boy->name != NULL)
-		{
-			good_boy->owner = malloc(leno);
-			if (good_boy->owner == NULL)
-			{
-				free(good_boy->name);
-				free(good_boy);
-				return (NULL);
-			}
-			if (good_boy->owner != NULL)
-			{
-				good_boy->age = age;
-				new_strcpy(good_boy->name, name);
-				new_strcpy(good_boy->owner, owner);
-			}
-		}
+		free(bulldog);
+		free(name_copy);
+		return (NULL);
 	}
-	return (good_boy);
+
+	_strncpy(name_copy, name);
+	_strncpy(owner_copy, owner);
+
+	(*bulldog).name = name;
+	(*bulldog).age = age;
+	(*bulldog).owner = owner;
+
+	return (bulldog);
+}
+
+/**
+ * _strlen - counts how many chars a string has
+ * @s: input pointer
+ * Return: # of chars a string has before '\0'
+ */
+
+int _strlen(char *s)
+{
+	int letters;
+
+	while (*s != '\0')
+	{
+		s++;
+		letters++;
+	}
+
+	return (letters);
+}
+
+/**
+ * *_strncpy - copies two strings limiting by # of bytes
+ * @dest: pointer to the destiny string
+ * @src: pointer to the source string
+ * Return: the concatenated string
+ */
+
+char *_strncpy(char *dest, char *src)
+{
+
+	int i;
+
+	for (i = 0; i != '\0'; i++)
+	{
+		dest[i] = src[i];
+	}
+
+	for (; i == '\0'; i++)
+	{
+		dest[i] = '\0';
+	}
+
+	return (dest);
 }
