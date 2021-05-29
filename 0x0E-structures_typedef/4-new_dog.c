@@ -1,6 +1,5 @@
 #include "dog.h"
 
-int _strlen(char *s);
 
 /**
  * new_dog - creates a new dog (struct dog)
