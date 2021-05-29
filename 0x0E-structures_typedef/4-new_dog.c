@@ -1,92 +1,64 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "dog.h"
+
 int _strlen(char *s);
-char *_strncpy(char *dest, char *src);
 
 /**
- * new_dog - creates a new instance for dog_t & saves name & owner
- * @name: pointer to name input
- * @age: integer input
- * @owner: pointer to owner input
- *
- * Return: pointer to dog_t struct
+ * new_dog - creates a new dog (struct dog)
+ * @name: name of the new dog
+ * @age: age of new dog
+ * @owner: owner of new dog
+ * Return: pointer of new dog
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *bulldog;
-	char *name_copy;
-	char *owner_copy;
+	int i;
+	dog_t *newDog;
 
-	bulldog = malloc(sizeof(dog_t));
-	if (bulldog == NULL)
+	newDog = malloc(sizeof(dog_t));
+	if (newDog == NULL)
 		return (NULL);
 
-	name_copy = malloc(sizeof(char) * (_strlen(name) + 1));
-	if (name_copy == NULL)
+	newDog->name = malloc(_strlen(name) + 1);
+	if (newDog->name == NULL)
 	{
-		free(bulldog);
-		return (NULL);
-	}
-	owner_copy = malloc(sizeof(char) * (_strlen(owner) + 1));
-	if (owner_copy == NULL)
-	{
-		free(bulldog);
-		free(name_copy);
+		free(newDog);
 		return (NULL);
 	}
 
-	_strncpy(name_copy, name);
-	_strncpy(owner_copy, owner);
+	newDog->owner = malloc(_strlen(owner) + 1);
+	if (newDog->owner == NULL)
+	{
+		free(newDog->name);
+		free(newDog);
+		return (NULL);
+	}
 
-	(*bulldog).name = name;
-	(*bulldog).age = age;
-	(*bulldog).owner = owner;
+	for (i = 0; name[i] != '\0'; i++)
+		newDog->name[i] = name[i];
+	newDog->name[i] = '\0';
 
-	return (bulldog);
+	for (i = 0; owner[i] != '\0'; i++)
+		newDog->owner[i] = owner[i];
+	newDog->owner[i] = '\0';
+
+	newDog->age = age;
+
+	return (newDog);
 }
 
 /**
- * _strlen - counts how many chars a string has
- * @s: input pointer
- * Return: # of chars a string has before '\0'
+ * _strlen - Calculate length of string
+ * @s: Pointer to string
+ * Return: Length of string
  */
-
 int _strlen(char *s)
 {
-	int letters;
-
-	while (*s != '\0')
-	{
-		s++;
-		letters++;
-	}
-
-	return (letters);
-}
-
-/**
- * *_strncpy - copies two strings limiting by # of bytes
- * @dest: pointer to the destiny string
- * @src: pointer to the source string
- * Return: the concatenated string
- */
-
-char *_strncpy(char *dest, char *src)
-{
-
 	int i;
 
-	for (i = 0; i != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		dest[i] = src[i];
 	}
+	return (i);
 
-	for (; i == '\0'; i++)
-	{
-		dest[i] = '\0';
-	}
-
-	return (dest);
 }
